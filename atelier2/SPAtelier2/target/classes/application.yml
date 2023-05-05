@@ -1,0 +1,16 @@
+server:
+  port: 8081
+  
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:55432/acudb
+    username: pgtp
+    password: tp
+  jpa:
+    hibernate:
+      ddl-auto: create
+      properties:
+        hibernate:
+          default_schema: asi
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
