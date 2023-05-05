@@ -17,7 +17,7 @@ public class AuthentificationService {
 	UserService uService;
 	
 	public void login(User user) {
-		uService.getUser(user);
+		//uService.getUser(user);
 	}
 
 }
