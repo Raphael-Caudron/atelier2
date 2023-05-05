@@ -6,4 +6,6 @@ import com.sp.model.Transaction;
 
 public interface TransactionRepository extends CrudRepository<Transaction, Integer> {
 
+	public List<Transaction> findByDate(String date);
+	
 }

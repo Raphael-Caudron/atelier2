@@ -8,20 +8,22 @@ import javax.persistence.Id;
 public class Transaction {
 	@Id
 	@GeneratedValue
+	private static int lastId = 0;
 	private int id;
-	private int idAcheteur;
-	private int idVendeur;
-	private int montant;
+	private int idBuyer;
+	private int idSeller;
+	private int value;
 	private String date;
 	
 	public Transaction() {
 	}
 
-	public Transaction(int id, int idAcheteur, int idVendeur, int montant, String date) {
-		this.id=id;
-		this.idAcheteur = idAcheteur;
-		this.idVendeur = idVendeur;
-		this.montant = montant;
+	public Transaction(int idBuyer, int idSeller, int value, String date) {
+		lastId++;
+		this.id=lastId;
+		this.idBuyer = idBuyer;
+		this.idSeller = idSeller;
+		this.value = value;
 		this.date = date;
 	}
 
@@ -33,28 +35,28 @@ public class Transaction {
 		this.id = id;
 	}
 
-	public int getIdAcheteur() {
-		return idAcheteur;
+	public int getIdBuyer() {
+		return idBuyer;
 	}
 
-	public void setIdAcheteur(int idAcheteur) {
-		this.idAcheteur = idAcheteur;
+	public void setIdBuyer(int idAcheteur) {
+		this.idBuyer = idAcheteur;
 	}
 
-	public int getIdVendeur() {
-		return idVendeur;
+	public int getIdSeller() {
+		return idSeller;
 	}
 
-	public void setIdVendeur(int idVendeur) {
-		this.idVendeur = idVendeur;
+	public void setIdSeller(int idSeller) {
+		this.idSeller = idSeller;
 	}
 
-	public int getMontant() {
-		return montant;
+	public int getValue() {
+		return value;
 	}
 
-	public void setMontant(int montant) {
-		this.montant = montant;
+	public void setValue(int value) {
+		this.value = value;
 	}
 
 	public String getDate() {
@@ -67,6 +69,6 @@ public class Transaction {
 
 	@Override
 	public String toString() {
-		return "TRANSACTION ["+this.id+"]: Acheteur:"+this.idAcheteur+", Vendeur:"+this.idVendeur+", Montant:"+this.montant+" Date:"+this.date;
+		return "TRANSACTION ["+this.id+"]: Buyer:"+this.idBuyer+", Seller:"+this.idSeller+", Value:"+this.value+" Date:"+this.date;
 	}
 }
