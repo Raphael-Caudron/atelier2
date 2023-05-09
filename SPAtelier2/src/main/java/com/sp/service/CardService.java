@@ -34,6 +34,15 @@ public class CardService {
 		}
 	}
 	
+	public Card getCard(String name) {
+		Optional<Card> cOpt = cardRepo.findByName(name);
+		if (cOpt.isPresent()) {
+			return cOpt.get();
+		} else {
+			return null;
+		}
+	}
+	
 	public Iterable<Card> getCards(Iterable<Integer> listId) {return cardRepo.findAllById(listId);}
 	
 	public Iterable<Card> getAllCards(){return cardRepo.findAll();}

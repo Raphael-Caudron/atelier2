@@ -29,6 +29,12 @@ public class CardRestController {
         Card c = cardServ.getCard(Integer.valueOf(id));
         return c;
     }
+	
+	@RequestMapping(method=RequestMethod.GET,value="/card/search/{name}")
+    public Card getCardByName(@PathVariable String name) {
+        Card c = cardServ.getCard(name);
+        return c;
+    }
 	/*
 	@RequestMapping(method=RequestMethod.PUT,value="/card/{id}")
     public Card modifyCard(@PathVariable String id) { //TODO : Change card
