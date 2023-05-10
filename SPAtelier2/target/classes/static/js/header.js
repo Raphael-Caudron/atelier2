@@ -11,3 +11,13 @@ xhr.onload = function() {
   }
 };
 xhr.send();
+
+function loadAdd() {
+	//Verif connection !!
+	window.location.href = "addCard.html"
+}
+
+function loadBuy() {
+	//Verif connection !!
+	window.location.href = "browse.html"
+}

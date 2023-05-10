@@ -15,26 +15,58 @@ public class Card {
 	private String superPowerName;
 	private int superPowerValue;
 	private int hp;
+	private int atk;
+	private int def;
+	private int eng;
 	private int value;
 	private String description;
 	private String imgUrl;
-	private boolean onSale = false;
+	private boolean onSale = true;
 
 	public Card() {		
 	}
 	
-	public Card(int id, int ownerId, String name, String superPowerName, int superPowerValue, int hp, int val, String description, String imgUrl) {
+	public Card(int id, int ownerId, String name, String superPowerName, int superPowerValue, int hp, int atk, int def, int eng,
+			int val, String description, String imgUrl, boolean sale) {
 		this.id = id;
 		this.ownerId = ownerId;
 		this.name = name;
 		this.superPowerName = superPowerName;
 		this.superPowerValue = superPowerValue;
 		this.hp = hp;
+		this.atk = atk;
+		this.def = def;
+		this.eng = eng;
 		this.value = val;
 		this.description = description;
 		this.imgUrl = imgUrl;
+		this.onSale = sale;
 	}
 	
+	public int getAtk() {
+		return atk;
+	}
+
+	public void setAtk(int atk) {
+		this.atk = atk;
+	}
+
+	public int getDef() {
+		return def;
+	}
+
+	public void setDef(int def) {
+		this.def = def;
+	}
+
+	public int getEng() {
+		return eng;
+	}
+
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+
 	public int getId() {
 		return id;
 	}
