@@ -18,7 +18,8 @@ public class AuthentificationRestController {
 	AuthentificationService aService;
 	
 	@RequestMapping(method=RequestMethod.POST, value="/login")
-	public void login(@RequestBody User user) {
-		aService.login(user);
+	public String login(@RequestBody User user) {
+		return aService.login(user);
 	}
+
 }

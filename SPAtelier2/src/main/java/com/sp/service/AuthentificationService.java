@@ -8,16 +8,17 @@ import org.springframework.stereotype.Service;
 
 import com.sp.model.User;
 
-//import com.sp.model.Auth;
+import com.sp.service.UserService;
 
 @Service
 public class AuthentificationService {
 	
-	@Autowired
-	UserService uService;
+	//@Autowired
+	//UserService uService;
 	
-	public void login(User user) {
+	public String login(User user) {
 		//uService.getUser(user);
+		return "bonjour";
 	}
 
 }
