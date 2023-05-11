@@ -1,19 +1,22 @@
 package com.sp.model;
 
+import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class User {
-	
 	@Id
 	@GeneratedValue
 	private Integer id;
 	private String username;
 	private String password;
 	private int wallet;
-	private Iterable<Integer> idList;
+	@ElementCollection
+	private List<Integer> idList;
 
 
 	public User() {}
@@ -57,7 +60,7 @@ public class User {
 		return idList;
 	}
 
-	public void setIdList(Iterable<Integer> idList) {
+	public void setIdList(List<Integer> idList) {
 		this.idList = idList;
 	}
 
@@ -71,4 +74,3 @@ public class User {
 
 
 }
-
