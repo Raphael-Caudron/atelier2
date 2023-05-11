@@ -16,6 +16,9 @@ public class UserService {
 
 
 	public void addUser(User u) {
+		List<Integer> maliste = (List<Integer>) u.getIdList();
+		maliste = CardService.gene5cartes();
+		u.setIdList(maliste);
 		User createdUser=uRepository.save(u);
 		// Liste de 5 entiers = CardService.gene5cartes()
 		// Set l'attribut idList de User (vide de base)
@@ -32,6 +35,18 @@ public class UserService {
 			return -1;
 		}
 	}
+	
+	
+	public User getUser(int id) {
+		Optional<User> cOpt = uRepository.findById(id);
+		if (cOpt.isPresent()) {
+			return cOpt.get();
+		}
+		else {
+			return null;
+		}
+	}
+	
 
 	public int getWallet(User u) {
 		String username = u.getUsername();
@@ -46,4 +61,3 @@ public class UserService {
 	}
 
 }
-
