@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 Manifest-Version: 1.0
 Build-Jdk-Spec: 11
 Implementation-Title: SPWebApp2
 Implementation-Version: 0.0.1-SNAPSHOT
 Created-By: Maven Integration for Eclipse
 
-=======
-Manifest-Version: 1.0
-Build-Jdk-Spec: 11
-Implementation-Title: SPWebApp2
-Implementation-Version: 0.0.1-SNAPSHOT
-Created-By: Maven Integration for Eclipse
-
->>>>>>> 05f1927f756a489328c8ad262eb68de367890866
-=======
-Manifest-Version: 1.0
-Build-Jdk-Spec: 11
-Implementation-Title: SPWebApp2
-Implementation-Version: 0.0.1-SNAPSHOT
-Created-By: Maven Integration for Eclipse
-
->>>>>>> cec1315ab3d45d03dada571067344b4093420f60

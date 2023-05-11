@@ -17,5 +17,15 @@ function logout() {
   localStorage.setItem('userId', '-1');
 
   // Rediriger l'utilisateur vers une autre page ou effectuer d'autres actions de déconnexion si nécessaire
-  window.location.href = '/static/login.html'; // Exemple de redirection vers la page de déconnexion
+  window.location.href = '/static/login.html'; 
+}
+
+  function loadAdd() {
+	//Verif connection !!
+	window.location.href = "addCard.html"
+}
+
+function loadBuy() {
+	//Verif connection !!
+	window.location.href = "browse.html"
 }

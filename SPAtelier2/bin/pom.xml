@@ -29,29 +29,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-<<<<<<< HEAD
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-
-		<dependency> 
-			<groupId>mysql</groupId> 
-		 	<artifactId>mysql-connector-java</artifactId> 
-			 <scope>runtime</scope> 
-		 </dependency> 
-
-=======
 		
->>>>>>> cec1315ab3d45d03dada571067344b4093420f60
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
 
-<<<<<<< HEAD
-=======
 <!-- 		<dependency>  -->
 <!-- 			<groupId>mysql</groupId>  -->
 <!-- 		 	<artifactId>mysql-connector-java</artifactId>  -->
@@ -63,7 +46,6 @@
 <!-- 			<artifactId>postgresql</artifactId> -->
 <!-- 		</dependency> -->
 
->>>>>>> cec1315ab3d45d03dada571067344b4093420f60
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>

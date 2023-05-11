@@ -1,11 +1,9 @@
 const cardTemplate = document.getElementById("cardTemplate");
 const cardContainer = document.getElementById("cardContainer");
-console.log("Dans js")
+
 async function fetchCards(){
-  console.log("await")
   const response = await fetch("/card");
   const cards = await response.json();
-  console.log(cards);
   for (let i = 0; i<cards.length; i++){
     const cardItem = cardTemplate.content.cloneNode(true);
     cardItem.querySelector(".card img").src = cards[i].imgUrl;
@@ -13,7 +11,7 @@ async function fetchCards(){
     cardItem.querySelector(".card #description").textContent = cards[i].description;
     cardItem.querySelector(".card #superPower").textContent = cards[i].superPowerName;
     cardItem.querySelector(".card #hp").textContent = cards[i].hp;
-    cardItem.querySelector(".card #cardBtn").textContent = cards[i].onSale ? "BUY" : "SEE";
+    //cardItem.querySelector(".card #cardBtn").textContent = cards[i].onSale ? "BUY" : "SEE";
     cardContainer.appendChild(cardItem);
   }
 }
