@@ -14,7 +14,7 @@ form.addEventListener('submit', (event) => {
     };
 
     //Post Api
-    let urlPost="127.0.0.1:8080"; 
+    let urlPost="127.0.0.1:8080/user"; 
     let context =   {
                         method: 'POST',
                         headers: {
@@ -26,7 +26,11 @@ form.addEventListener('submit', (event) => {
         
     fetch(urlPost,context)
         .then(response => response.json())
-        .then()
+        .then(response => {
+            const id = JSON.stringify(response);
+            localStorage.setItem("userId",id)
+
+        })
         .catch(error => err_callback(error));
 });
 

@@ -11,3 +11,11 @@ xhr.onload = function() {
   }
 };
 xhr.send();
+
+function logout() {
+  // Mettre à jour la variable du local storage
+  localStorage.setItem('userId', '-1');
+
+  // Rediriger l'utilisateur vers une autre page ou effectuer d'autres actions de déconnexion si nécessaire
+  window.location.href = '/static/login.html'; // Exemple de redirection vers la page de déconnexion
+}

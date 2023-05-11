@@ -13,11 +13,11 @@ import com.sp.service.UserService;
 @Service
 public class AuthentificationService {
 	
-	//@Autowired
-	//UserService uService;
+	@Autowired
+	UserService uService;
 	
 	public String login(User user) {
-		//uService.getUser(user);
+		uService.getUserId(user);
 		return "bonjour";
 	}
 
